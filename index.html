@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>愛飯團 品牌介紹｜有愛、有飯、有朋友</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&family=Noto+Serif+TC:wght@600;900&display=swap" rel="stylesheet">
+<style>
+:root{--red:#c0111f;--red-d:#8e0c17;--ink:#231a19;--mute:#6b605d;--bg:#f7f6f4;--card:#fff;--line:#e4dfdb;--r:10px}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--ink:#f2ecea;--mute:#b3a8a4;--bg:#181212;--card:#241b1a;--line:#3a2e2c;--red:#e5424f}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:0}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.8 "Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif}
+h1,h2,h3{font-family:"Noto Serif TC","Songti TC",serif;line-height:1.3;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);display:flex;gap:4px;padding:8px 16px;overflow-x:auto;white-space:nowrap}
+nav b{color:var(--red);font-family:"Noto Serif TC",serif;font-size:18px;margin-right:12px;align-self:center}
+nav a{text-decoration:none;padding:4px 12px;border-radius:99px;font-size:14px;color:var(--mute)}
+nav a:hover{background:var(--line);color:var(--ink)}
+.hero{background:var(--red);color:#fff;padding:72px 24px 64px}
+.hero>div{max-width:960px;margin:0 auto}
+.hero h1{font-weight:900;font-size:clamp(44px,11vw,120px);letter-spacing:.04em;line-height:1.12}
+.hero h1 span{display:block}
+.hero h1 span:nth-child(2){padding-left:1.2em}
+.hero h1 span:nth-child(3){padding-left:2.4em}
+.hero p{max-width:34em;margin:32px 0 0;font-size:18px;opacity:.95}
+.hero small{display:block;margin-top:8px;opacity:.8}
+section{max-width:960px;margin:0 auto;padding:72px 24px 0}
+h2{font-size:clamp(26px,4vw,36px);margin-bottom:8px}
+.lead{color:var(--mute);margin:0 0 28px;max-width:40em}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:28px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+.fact strong{display:block;font:900 30px/1.2 "Noto Serif TC",serif;color:var(--red)}
+.fact span{color:var(--mute);font-size:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+button{font:inherit;cursor:pointer}
+.chip{border:1px solid var(--line);background:var(--card);color:var(--ink);padding:6px 16px;border-radius:99px}
+.chip[aria-pressed=true],.chip.on{background:var(--red);border-color:var(--red);color:#fff}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px;min-height:110px}
+.panel h3{font-size:20px;margin-bottom:6px}
+.panel p{margin:0;color:var(--mute)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}
+.item h3{font-size:18px;margin-bottom:4px}
+.item p{margin:0;color:var(--mute);font-size:15px}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:12px}
+.people .item{border-left:4px solid var(--red)}
+.people em{font-style:normal;color:var(--red);font-size:14px}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:0;margin-bottom:16px;border-left:1px solid var(--line)}
+.step{border:0;border-right:1px solid var(--line);border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--card);color:var(--mute);padding:12px 8px;text-align:center;font-size:14px}
+.step b{display:block;font:900 20px/1.2 "Noto Serif TC",serif}
+.step[aria-selected=true]{background:var(--red);color:#fff;border-color:var(--red)}
+.price{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-top:16px}
+.ord{display:flex;flex-wrap:wrap;gap:8px;list-style:none;counter-reset:o;padding:0;margin:16px 0 0}.ord li{counter-increment:o;border:1px solid var(--line);border-radius:99px;padding:4px 16px;font-weight:500}.ord li::before{content:counter(o)" ";color:var(--red);font-weight:700}
+.bank{margin:16px 0 0;display:grid;gap:8px}.bank div{display:flex;gap:16px;align-items:center;border-top:1px solid var(--line);padding-top:8px}.bank dt{width:3em;color:var(--mute);font-size:14px}.bank dd{margin:0;font-weight:500}
+.price div{border:1px dashed var(--line);border-radius:var(--r);padding:12px 14px;font-size:14px;color:var(--mute)}
+.price b{display:block;color:var(--ink);font-size:16px}
+.cal{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin-bottom:16px}
+select{font:inherit;padding:6px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink)}
+.tl{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.tl li{background:var(--card);border:1px solid var(--line);border-top:4px solid var(--red);border-radius:var(--r);padding:14px 16px}
+.tl li:nth-child(odd){border-top-color:var(--ink)}
+.tl b{display:block;font:900 22px/1.3 "Noto Serif TC",serif}
+.tl span{font-size:14px;color:var(--mute)}
+.ban{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}
+.stage{flex:1 1 280px;min-height:200px;display:flex;align-items:center;justify-content:center;background:var(--bg);border:1px dashed var(--line);border-radius:var(--r);padding:16px}
+#box{background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;font-weight:700;border-radius:4px;transition:all .25s;max-width:100%}
+.cta{margin-top:72px;background:var(--ink);color:var(--bg);padding:56px 24px;text-align:center}
+.cta h2{margin-bottom:8px}
+.cta p{margin:0;opacity:.8}
+.cta a{color:inherit}
+.contact{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:760px;margin:28px auto 0;text-align:left}.contact div{border-top:1px solid rgba(255,255,255,.3);padding-top:10px}.contact dt{font-size:13px;opacity:.7}.contact dd{margin:0;font-weight:500;overflow-wrap:anywhere}
+footer{padding:20px;text-align:center;color:var(--mute);font-size:13px}
+</style>
+</head>
+<body>
+<nav aria-label="頁面導覽"><b>愛飯團</b>
+<a href="#about">認識我們</a><a href="#events">餐會</a><a href="#team">團隊</a><a href="#charity">公益</a><a href="#join">合作方式</a><a href="#money">帳款</a><a href="#banner">廣宣尺寸</a></nav>
+
+<header class="hero"><div>
+<h1><span>有愛、</span><span>有飯、</span><span>有朋友</span></h1>
+<p>台灣第一個高端美食社群網站。在美食裡，我們找到人生幸福的片刻。</p>
+<small>www.ifuntuan.com</small>
+</div></header>
+
+<section id="about">
+<h2>認識愛飯團</h2>
+<p class="lead">愛飯團創立於 2012 年 11 月，是一個會員制的美食社群，提供精緻的餐會體驗與嚴選美食購物。我們長期為會員挑選獨特、高品質的食物，並以專業細緻的餐會，凝聚一群對飲食與生活品質講究的忠實會員。</p>
+<div class="chips" role="tablist" aria-label="主要服務">
+<button class="chip on" role="tab" data-k="0">飯團活動</button>
+<button class="chip" role="tab" data-k="1">海外飯團</button>
+<button class="chip" role="tab" data-k="2">愛市集</button>
+<button class="chip" role="tab" data-k="3">烹飪教室/品油課/品酒課</button>
+</div>
+<div class="panel" id="svc" aria-live="polite"></div>
+</section>
+
+<section id="events">
+<h2>愛飯團餐會有什麼特別的</h2>
+<p class="lead">愛飯團的餐會，特別在這三件事。</p>
+<div class="grid">
+<div class="item"><h3>達人說菜</h3><p>美食達人或名人帶路，講解每一道菜色。</p></div>
+<div class="item"><h3>私房菜單</h3><p>別人吃不到的獨家菜色。</p></div>
+<div class="item"><h3>頂級餐廳</h3><p>訂位要等一年？跟愛飯團來吧！</p></div>
+</div>
+</section>
+
+<section id="team">
+<h2>團隊</h2>
+<p class="lead">內容是最好的行銷，愛飯團既是行銷平台，也是媒體。</p>
+<div class="people">
+<div class="item"><h3>許心怡（Cindy Hsu）</h3><em>愛飯團團長．創辦人兼執行長</em>
+<p>曾任《ELLE 國際中文版》總編輯、樺榭文化集團總編輯、《時報週刊》執行副社長，以及《News98 愛吃愛生活》主持人，以時尚媒體與資深美食家背景，引領頂級飲食美學。</p></div>
+<div class="item"><h3>吳恩文（Andy Wu）</h3><em>總經理・美食家</em>
+<p>曾任台視新聞主播、中天新聞採訪組長與東森電視部副理，擁有豐富媒體與公關顧問資歷。曾長期主持中廣流行網《吳恩文的快樂廚房》，並著有多本暢銷食譜書，以深厚的美食文化底蘊，深化餐席交流與餐飲體驗。</p></div>
+</div>
+</section>
+
+<section id="charity">
+<h2>公益</h2>
+<p class="lead">好吃的東西，也能做好事。</p>
+<div class="people">
+<div class="item"><h3>于美人做好事小組</h3>
+<p>許心怡與吳恩文都是于美人做好事小組的成員。18 年來，以零行政支出的純公益精神，與台灣最優秀的烘焙職人攜手，每售出一盒蛋糕或餅乾，即捐出 100 元，至今累積已捐出 2,680 萬元給 18 個公益團體。</p></div>
+<div class="item"><h3>愛飯團公益餐會</h3>
+<p>愛飯團每年舉辦公益餐會，由會員贊助支持，攜手仲誼公關、星級主廚與各領域的優秀人才，為偏鄉孩童準備米其林等級的精緻美食體驗。除了餐會，還有美學與多元體驗課程，包括麵包課、理財課、花藝課、財商課等。贊助者不必出席，活動結束後，就會收到孩子們親筆寫下的感謝卡片。</p></div>
+</div>
+</section>
+
+<section id="join">
+<h3 style="font-size:20px;margin-bottom:12px">遇見懂你的美食知音</h3>
+<div class="grid" style="margin-bottom:36px">
+<div class="item"><h3>專業選品團隊</h3><p>美食家實際試吃評測，專業推薦。</p></div>
+<div class="item"><h3>精準客群</h3><p>擁有一群追求生活品味的美食愛好者。</p></div>
+<div class="item"><h3>合理定價</h3><p>重視品質，維護品牌價值。</p></div>
+</div>
+<h3 style="font-size:20px;margin-bottom:8px">如何與我們一起傳遞美味</h3>
+<p class="lead">能打動人心的好味道，與讓人安心的好食材、好品質，是首要基礎。</p>
+<div class="grid" style="margin-bottom:28px">
+<div class="item"><h3>合法稅務開立</h3><p>可開立發票或免用統一發票收據。</p></div>
+<div class="item"><h3>清楚完整的食品標示</h3><p>提供安心、透明的合法食品相關標示與檢驗報告。</p></div>
+<div class="item"><h3>準時出貨回單</h3><p>於約定的時限內完成出貨。<br>並於系統回覆宅配單號。</p></div>
+<div class="item"><h3>穩定商品品質</h3><p>讓每一位顧客，都能享受到一致的美味。</p></div>
+<div class="item"><h3>上架前品鑑與記錄</h3><p>提供商品供團隊試吃、拍照。</p></div>
+</div>
+<p class="lead" style="margin-bottom:12px">跟著數字走，輕鬆開啟我們的合作</p>
+<div class="steps" id="steps" role="tablist" aria-label="合作流程"></div>
+<div class="panel" id="stepp" aria-live="polite"></div>
+</section>
+
+<section id="money">
+<h2>帳款怎麼結</h2>
+<p class="lead">每月 1 日至月底為結算期間。請於次月 10 日前，先以 E-mail 與愛飯團確認金額無誤，並將對帳單與發票寄回，帳款會在當月底前匯出。選擇月份即可試算各個日期：</p>
+<div class="cal"><label for="mon">銷售月份</label><select id="mon"></select></div>
+<ol class="tl" id="tl"></ol>
+</section>
+
+<section id="banner">
+<h2>廣宣素材尺寸</h2>
+<p class="lead">素材可直接傳給愛飯團安排曝光。點選版位，預覽尺寸比例。</p>
+<div class="ban">
+<div>
+<div class="chips" id="bchips" style="flex-direction:column;align-items:flex-start"></div>
+</div>
+<div class="stage"><div id="box"></div></div>
+</div>
+</section>
+
+<div class="cta"><h2>想讓會員吃到你的好東西？</h2><p>歡迎與我們聯繫。</p>
+<dl class="contact">
+<div><dt>電話</dt><dd><a href="tel:+886227010004">02-2701-0004</a></dd></div>
+<div><dt>E-mail</dt><dd><a href="mailto:service@ifuntuan.com">service@ifuntuan.com</a></dd></div>
+<div><dt>官網</dt><dd><a href="https://ifuntuan.com" target="_blank" rel="noopener">ifuntuan.com</a></dd></div>
+<div><dt>FB 粉專</dt><dd><a href="https://www.facebook.com/funtuan/" target="_blank" rel="noopener">facebook.com/funtuan</a></dd></div>
+<div><dt>LINE@</dt><dd><a href="https://lin.ee/x3FUn8N" target="_blank" rel="noopener">lin.ee/x3FUn8N</a></dd></div>
+</dl></div>
+<footer>愛飯團 ifuntuan.com</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const svc=[
+["飯團活動","頂級餐廳餐敘、私房菜單、達人帶路、主廚招待與餐酒搭配。"],
+["海外飯團活動","走訪東京、京都、金澤、上海、成都、澳門、清邁……的美食餐廳旅行團。"],
+["愛市集","獨家、限量、嚴選美食與餐廚精品。我們只選最好吃的，每一樣商品上架前都親自試吃。"],
+["烹飪教室/品油課/品酒課","名廚教學與品嚐，也有品油課、品酒課。"]];
+document.querySelectorAll('[data-k]').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('[data-k]').forEach(x=>x.classList.toggle('on',x===b));show(+b.dataset.k)});
+function show(i){$('#svc').innerHTML='<h3>'+svc[i][0]+'</h3><p>'+svc[i][1]+'</p>'}show(0);
+
+const st=[
+["簽約","合約用印完成後，愛飯團會將合約連同愛飯團貼紙、開辦費發票一併寄回。"],
+["繳開辦費","初次合作需繳開辦費 NT$5,000，含系統使用與後續廣宣。完成匯款後，請告知匯款日期與帳戶末五碼。",'<dl class="bank"><div><dt>銀行</dt><dd>永豐銀行 敦南分行（代碼 807）</dd></div><div><dt>帳號</dt><dd><span id="acct">009-018-003-06788</span></dd></div><div><dt>戶名</dt><dd>好心地科技股份有限公司</dd></div></dl>'],
+["開通後台","合約簽回後，我們會開放廠商後台，商品上架、修改、庫存與訂單管理都能自行操作。"],
+["製作商品頁","商品封面圖為正方形，若上傳非正方形的圖，系統會自動裁切。<br>上傳位置在商品編輯頁最下方，可一次上傳多張。<br>內文採圖文穿插，也可內嵌 YouTube 影片。<br>編排順序通常是：",'<ol class="ord"><li>品名</li><li>產品文案</li><li>圖片</li><li>品牌簡介</li><li>規格標示</li></ol>'],
+["商品上架","網站上會有三種價格。商品分潤須含稅、運費。",'<div class="price"><div><b>建議售價</b>品牌建議的市場價格</div><div><b>網路售價</b>一般會員購買價</div><div><b>VIP 價</b>付費 VIP 會員的購買價，價差由愛飯團吸收，上架時請先設定為網路售價的 95 折</div></div>'],
+["出貨","有訂單時，請將愛飯團貼紙貼在出貨外箱，並於後台回覆宅配單號。"]];
+const sp=$('#steps');
+st.forEach((s,i)=>{const b=document.createElement('button');b.className='step';b.setAttribute('role','tab');b.setAttribute('aria-selected',i==0);b.innerHTML='<b>'+(i+1)+'</b>'+s[0];
+ b.onclick=()=>{sp.querySelectorAll('button').forEach(x=>x.setAttribute('aria-selected',x===b));stp(i)};sp.append(b)});
+function stp(i){$('#stepp').innerHTML='<h3>'+st[i][0]+'</h3><p>'+st[i][1]+'</p>'+(st[i][2]||'');}stp(0);
+
+const now=new Date(),mon=$('#mon');
+for(let m=1;m<=12;m++){const o=new Option(m+' 月',m);if(m===now.getMonth()+1)o.selected=true;mon.add(o)}
+function cal(){const m=+mon.value,y=now.getFullYear(),last=new Date(y,m,0).getDate(),n=m%12+1,nl=new Date(y+(m==12?1:0),n,0).getDate();
+ $('#tl').innerHTML=
+ '<li><b>'+m+'/1–'+m+'/'+last+'</b><span>帳款期間</span></li>'+
+ '<li><b>'+n+'/1–'+n+'/10</b><span>對帳期間：先 E-mail 確認金額</span></li>'+
+ '<li><b>'+n+'/10</b><span>收件截止日：對帳單與發票寄回</span></li>'+
+ '<li><b>'+n+'/'+nl+'</b><span>最遲匯款日</span></li>'}
+mon.onchange=cal;cal();
+
+const bn=[["首頁",1180,480],["品牌館",1200,400],["社群限動（或短影片）",1080,1920],["社群貼文（或影片）",1200,1200]];
+const bc=$('#bchips');
+bn.forEach((x,i)=>{const b=document.createElement('button');b.className='chip';b.setAttribute('aria-pressed',i==0);b.textContent=x[0]+'　'+x[1]+' × '+x[2];
+ b.onclick=()=>{bc.querySelectorAll('button').forEach(y=>y.setAttribute('aria-pressed',y===b));bx(x)};bc.append(b)});
+function bx(x){const w=Math.min(300,x[1]/x[2]>1?300:300*x[1]/x[2]*(x[1]/x[2]<.6?1.2:1)),box=$('#box'),r=x[1]/x[2];
+ let W=r>=1?300:200,H=W/r;if(H>340){H=340;W=H*r}
+ box.style.width=W+'px';box.style.height=H+'px';box.textContent=x[1]+' × '+x[2]}bx(bn[0]);
+</script>
+</body>
+</html>
